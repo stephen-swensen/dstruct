@@ -4,11 +4,11 @@
 
 <div class="text-left">
     <h1 class="display-4">DStruct-ive Adventures</h1>
-    A DStruct-ive blog by Stephen Swensen, documenting his adventures implementing
+    A DStruct-ive blog by <a href="https://stackoverflow.com/users/236255/stephen-swensen?tab=profile">Stephen Swensen</a>, documenting his adventures implementing
     persistent Data Structures as a Service with a relational data store
-    and providing a RESTful interface. The tech stack will be built around C# and Azure.
+    and a RESTful interface. The tech stack will be built around C# / .NET 6 and Azure.
     
-    <h2 class="display-6">May 16th, 2022</h2>
+    <h2 class="display-6">May 16th, 2022 - 9:30pm ET</h2>
     <p>So far I've done the following:</p>
     <ul>
         <li>Purchased the domain name <a href="https://www.dstruct.dev">dstruct.dev</a> (pretty cheap)</li>
@@ -24,4 +24,18 @@
         I'm doing development on my personal X1 Carbon Gen 7 which is running Linux Mint.
         I'm using Rider as my primary IDE + vim to hack at files ad-hoc.
     </p>
+    
+    <p>Some things I'm thinking about doing next:</p>
+    <ul>
+        <li>Getting this thing deployed to Azure (perhaps with Kubernetes, definitely with Docker containers)</li>
+        <li>Setting up the Azure SQL db in Azure</li>
+        <li>Setting up key / value store in Azure for managing application variables?</li>
+        <li>Configuring <a href="https://csharpier.com/docs/Installation">CSharpier</a> for code formatting</li>
+        <li>Look into whether using HTML5 tags like <code>article</code> might be a better way to organize this blog</li>
+        <li>Look into whether I should create separate files for each blog entry, and perhaps load them dynamically (maybe inlined, maybe as a hyperlinked TOC)</li>
+        <li>Try to get Hot Reloading to work consistently (or maybe fallback on older methods for Razer view files at least)</li>
+        <li>Getting the <code>api</code> project set-up of course (a separate WebAPI project and deployment unit under the same mono repo solution)</li>
+        <li>Start scripting out the SQL data structures of course (I'm thinking to start with stack or queue first)</li>
+        <li>Look into multi-tenate patterns in Azure SQL (Row Level Security - RLS - looks like a promising foundation)</li>
+    </ul>
 </div>
