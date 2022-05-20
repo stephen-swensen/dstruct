@@ -5,6 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
+COPY ["nuget.config", "nuget.config"]
 COPY ["www/www.csproj", "www/"]
 RUN dotnet restore "www/www.csproj"
 COPY . .
