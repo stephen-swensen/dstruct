@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace api.Controllers;
 
 [ApiController]
-[Route("status")]
 public class StatusController : ControllerBase
 {
 
@@ -14,7 +13,7 @@ public class StatusController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet("/")]
+    [HttpGet("status")]
     public async Task<IActionResult> Status()
     {
         //ensure outbound connectivity
