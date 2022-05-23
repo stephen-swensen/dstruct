@@ -8,7 +8,7 @@ WORKDIR /src
 COPY nuget.config .
 COPY api/packages.lock.json .
 COPY api/api.csproj .
-RUN dotnet restore -v d --locked-mode api.csproj
+RUN dotnet restore --locked-mode api.csproj
 COPY api/ .
 WORKDIR /src
 RUN dotnet build api.csproj -c Release -o /app/build
