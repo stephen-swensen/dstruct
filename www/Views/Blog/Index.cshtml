@@ -11,7 +11,31 @@
         and a RESTful interface. Built with by C# / .NET 6 and deployed on Azure.
     </p>
     
-    <h2 class="display-6">May 23th, 2022 - 09:41pm ET</h2>
+    <h2 class="display-6">May 23th, 2022 - 10:49pm ET</h2>
+    
+    <p>
+    Notes on SQL: it looks like there is a version of SQL Server for Linux and
+    corresponding docker containers available and that they have parity with
+    the Cloud AZure SQL offering. There is also a "local" (file-based) version
+    which could potentially be used tests. So all together, could be able to 
+    run an isolated environment independent of Azure for local development,
+    plus ephemeral file-based relational store for tests, while deploying
+    to Azure SQL for production.
+    </p>
+    
+    <p>
+    Link for install SQL Server 2019 on Ubuntu (which will also install the
+    <code>sqlcmd</code> tool which I think may prove usefule Azure SQL
+    access eventually too): <a href="https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15">link</a>
+    </p>
+    
+    <p>In fact, the command line tool can be installed separately: <a href="https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver16#tools">link</a></p>
+    
+    <p>So maybe coulda just stuck with that + running in a docker container with persistent disk store: <a href="https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&pivots=cs1-bash>link">link</a></p>
+    
+    <p>In anycase, got it working locally. Pretty amazing to see SQL Server running natively on linux (MS has a come a LONG way in the last 6 years, hasn't it)!</p>
+    
+    <h2 class="display-6">May 23th, 2022 - 09:41am ET</h2>
     
     Today:
     <ul>
