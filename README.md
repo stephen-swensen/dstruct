@@ -15,3 +15,11 @@ Run `./sql/create-db.sh` to drop and recreate the `DStruct` database plus tables
 ## Start the apps
 
 Run `docker compose up` to start the `www` and `api` projects running on ports 8080 and 9090 respectively.
+
+# Anatomy
+
+* `www` is a C# / .NET 6 / ASP.NET MVC project that provides a homefront for the project with a blog documenting my adventures
+* `api` is a C# / .NET 6 / ASP.NET WebAPI project that provides a RESTful interface for our persistent data structures
+* `sql` is a T-SQL script folder that implements our data structures
+
+We plan to use Docker and AKS to deploy the two apps to `www.dstruct.dev` and `api.dstruct.dev` domains, and Azure SQL as our DB server.
