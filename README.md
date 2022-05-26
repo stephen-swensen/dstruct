@@ -18,6 +18,8 @@ Run `docker compose up` to start the `www` and `api` projects running on ports 8
 
 # Anatomy
 
+You could call this a mono-repo, with three distinct projects organized under subdirectories:
+
 * `www` is a C# / .NET 6 / ASP.NET MVC project that provides a homefront for the project with a blog documenting my adventures
 * `api` is a C# / .NET 6 / ASP.NET WebAPI project that provides a RESTful interface for our persistent data structures
 * `sql` is a T-SQL script folder that implements our data structures
