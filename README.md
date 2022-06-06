@@ -4,7 +4,7 @@ It's often struct me how fundemental data structures such as stacks and queues e
 
 # Getting Started
 
-We assume Linux OS with .NET 6, Docker, and SQL Server 2016 for Linux installed locally
+We assume Linux OS with .NET 6, Docker, and SQL Server 2019 for Linux installed locally
 
 ## Create the Database
 
