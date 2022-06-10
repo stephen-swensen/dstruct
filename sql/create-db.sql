@@ -29,9 +29,21 @@ create table access.TenantKey
     TenantID int not null index IX_TenantKey_TenantID nonclustered,
     -- maybe make this an encrypted column
     [Key] nvarchar(255) not null,
-    foreign key (TenantID) references access.Tenant(TenantID)
+    foreign key (TenantID) references access.Tenant(TenantID),
+    unique(TenantID, [Key])
 );
 
+GO
+
+create procedure access.Authenticate
+    @TenantName nvarchar(255),
+    @TenantKey nvarchar(255)
+as
+    set nocount on;
+    select count(*)
+    from access.Tenant t inner join access.TenantKey tk on  t.TenantID = tk.TenantID
+    where t.Name = @TenantName and tk.[Key] = @TenantKey
+;
 GO
 
 create schema stack;
