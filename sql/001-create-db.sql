@@ -49,7 +49,8 @@ create table stack.Item
     StackID nvarchar(255) not null index IX_Item_StackID,
     -- expecting this to be json, but could be anything perhaps
     Value nvarchar(max),
-    foreign key (TenantID) references access.Tenant(TenantID)
+    foreign key (TenantID) references access.Tenant(TenantID),
+    index IX_Item_TenantID_StackID nonclustered (TenantID, StackID)
 );
 
 GO
