@@ -10,7 +10,11 @@ We assume Linux OS with .NET 6, Docker, and SQL Server 2019 for Linux installed 
 
 The following environment variables must be defined: `DSTRUCT_DB_SERVER`, `DSTRUCT_DB_USER`, `DSTRUCT_DB_PASSWORD`
 
-Run `./sql/run.sh create-db.sql` to drop and recreate the `DStruct` database plus tables and stored proceedures. Run `./sql/run.sh create-test-data.sql` to create some test data. Run `./sql/run.sh` without arguments to start an interactive `sqlcmd` session. There is also a `Makefile` in the `sql` folder which adds some convenience around these commands.
+* Run `./sql/run.sh create-db.sql` to drop and recreate the `DStruct` database plus tables and stored proceedures. 
+* (optional) Run `./sql/run.sh create-test-data.sql` to create some test data. 
+* (bonus) Run `./sql/run.sh` without arguments to start an interactive `sqlcmd` session. 
+
+There is also a `Makefile` in the `sql` folder which adds some convenience around these commands.
 
 ## Start the apps
 
