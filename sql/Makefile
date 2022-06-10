@@ -7,3 +7,6 @@ create-db:
 
 create-test-data:
 	./run.sh create-test-data.sql
+
+connect:
+	./run.sh

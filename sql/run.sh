@@ -1,9 +1,8 @@
 #!/bin/bash
 
-FILE_ARG=
 if [ $# -eq 1 ]; then 
-    FILE_ARG="-i$1"
+    sqlcmd -S "$DSTRUCT_DB_SERVER" -U "$DSTRUCT_DB_USER" -P "$DSTRUCT_DB_PASSWORD" -i $1
+else
+    sqlcmd -S "$DSTRUCT_DB_SERVER" -U "$DSTRUCT_DB_USER" -P "$DSTRUCT_DB_PASSWORD"
 fi
-
-sqlcmd -S "$DSTRUCT_DB_SERVER" -U "$DSTRUCT_DB_USER" -P "$DSTRUCT_DB_PASSWORD" "$FILE_ARG"
 
