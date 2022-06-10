@@ -28,7 +28,7 @@ create table access.TenantKey
     TenantKeyID int identity (1,1) primary key,
     TenantID int not null index IX_TenantKey_TenantID nonclustered,
     -- maybe make this an encrypted column
-    [Key] nvarchar(max) not null,
+    [Key] nvarchar(255) not null,
     foreign key (TenantID) references access.Tenant(TenantID)
 );
 
